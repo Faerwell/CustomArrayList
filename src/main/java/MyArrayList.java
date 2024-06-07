@@ -20,6 +20,12 @@ public class MyArrayList<E> implements CustomArrayList<E> {
         return false;
     }
 
+    public void addAll(E[] elements) {
+        for (E element : elements) {
+            add(element);
+        }
+    }
+
     @Override
     public void remove(int index) {
         try {
@@ -49,6 +55,15 @@ public class MyArrayList<E> implements CustomArrayList<E> {
     @Override
     public void update(int index, E e) {
         values[index] = e;
+    }
+
+    @Override
+    public void show() {
+        System.out.print("My array List: ");
+        for (E element : values) {
+            System.out.print(element + " ");
+        }
+        System.out.println();
     }
 
     @Override

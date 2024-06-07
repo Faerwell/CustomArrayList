@@ -3,13 +3,15 @@ public class Runner {
         CustomArrayList<String> stringArrayList = new MyArrayList<String>();
         stringArrayList.add("first");
         stringArrayList.update(0,"second");
-        System.out.println(stringArrayList.get(0));
+        System.out.printf("Index 0: %s \n", stringArrayList.get(0));
         stringArrayList.remove(0);
-        stringArrayList.add("first");
 
-        for (String s : stringArrayList) {
-            System.out.printf("My array List: %s", s);
-        }
+        String[] strings = new String[]{"first", "second", "three"};
+        stringArrayList.addAll(strings);
+        stringArrayList.show();
+        stringArrayList.update(0,"1");
+        stringArrayList.show();
+
 
     }
 }
